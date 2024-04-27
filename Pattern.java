@@ -1,20 +1,16 @@
-import java.util.*;
 public class Pattern{
     public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     int n = sc.nextInt();
+     int n = 3;
      for(int i=1;i<=n;i++){
-   //spaces outer
-   for(int j=1;j<=(n-i);j++){
-    System.out.print(" ");
-   }
    //stars
    
-    for(int j=1;j<=i;j++){
+    for(int j=1;j<=(2*n)+3;j++){
+      if((i+j)==4||(i+j)==8||((j==4)&&(i==2))||((j==9)&&(i==2||i==3))){
         System.out.print("*");
-        for(int k=1;k<=(i-1);k++){
-            System.out.print(" ");
-        }
+      }
+       else{
+        System.out.print("  ");
+    }
     }
     
     System.out.println();
